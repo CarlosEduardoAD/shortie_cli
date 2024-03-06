@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"log"
-	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -16,15 +15,10 @@ var rootCmd = &cobra.Command{
 	},
 }
 
-func init() {
-
-}
-
 func Execute() {
 	err := rootCmd.Execute()
 
 	if err != nil {
 		log.Fatal(err)
-		os.Exit(1)
 	}
 }

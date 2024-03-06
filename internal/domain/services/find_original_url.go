@@ -1,6 +1,7 @@
 package services
 
 import (
+	shorturl "github.com/CarlosEduardoAD/filler/internal/domain/models/shortUrl"
 	shortUrlRepository "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/postgres"
 )
 
@@ -14,12 +15,12 @@ func NewFindOriginalUrl(shortUrlRepository *shortUrlRepository.ShortUrlPostgres)
 	}
 }
 
-func (c *FindOriginalUrl) Execute(code string) (string, error) {
+func (c *FindOriginalUrl) Execute(code string) (*shorturl.ShortUrl, error) {
 	shortUrl, err := c.ShortUrlRepository.Find(code)
 
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
-	return shortUrl.OriginalUrl, nil
+	return shortUrl, nil
 }

@@ -1,6 +1,8 @@
 package shorturl
 
-type ShortUrlPostgresActions interface {
+type ShortUrlActions interface {
 	Create(shortUrl *ShortUrl) error
-	Find(shortUrl *ShortUrl) (*ShortUrl, error)
+	Find(code string) (*ShortUrl, error)
+	CreateCache(code, originalUrl string) error
+	FindCache(orignialUrl string) (string, error)
 }
