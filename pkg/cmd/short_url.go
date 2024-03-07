@@ -6,7 +6,7 @@ import (
 	exec "os/exec"
 	"runtime"
 
-	"github.com/CarlosEduardoAD/filler/internal/application/commands"
+	"github.com/CarlosEduardoAD/shortie_cli/internal/application/commands"
 	"github.com/spf13/cobra"
 )
 
@@ -41,7 +41,7 @@ var acessCmd = &cobra.Command{
 		originalUrl, err := commands.FindOriginalUrl(*shortUrl)
 
 		if err != nil {
-			log.Panic(err)
+			log.Println(err)
 			os.Exit(1)
 		}
 

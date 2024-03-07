@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	shorturl "github.com/CarlosEduardoAD/filler/internal/domain/models/shortUrl"
-	"github.com/CarlosEduardoAD/filler/internal/infrastructure/cryptography"
-	shortUrlRepository "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/postgres"
+	shorturl "github.com/CarlosEduardoAD/shortie_cli/internal/domain/models/shortUrl"
+	"github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/cryptography"
+	shortUrlRepository "github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/persistence/postgres"
 )
 
 type CreateShortUrl struct {

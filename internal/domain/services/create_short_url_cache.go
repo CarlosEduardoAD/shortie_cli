@@ -1,7 +1,7 @@
 package services
 
 import (
-	shortUrlRepository "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/redis"
+	shortUrlRepository "github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/persistence/redis"
 )
 
 type CreateShortUrlCache struct {

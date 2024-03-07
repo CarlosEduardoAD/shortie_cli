@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/CarlosEduardoAD/filler/pkg/cmd"
+	"github.com/CarlosEduardoAD/shortie_cli/pkg/cmd"
 
 	"github.com/joho/godotenv"
 )

@@ -1,12 +1,13 @@
 package commands
 
 import (
+	"log"
 	"strings"
 
-	"github.com/CarlosEduardoAD/filler/internal/domain/services"
-	postgres "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/postgres"
-	redis "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/redis"
-	"github.com/CarlosEduardoAD/filler/internal/utils"
+	"github.com/CarlosEduardoAD/shortie_cli/internal/domain/services"
+	postgres "github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/persistence/postgres"
+	redis "github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/persistence/redis"
+	"github.com/CarlosEduardoAD/shortie_cli/internal/utils"
 )
 
 func CreateShortUrl(url string) (string, error) {
@@ -52,6 +53,7 @@ func FindOriginalUrl(short_url string) (string, error) {
 	shorturl, err := shortUrlService.Execute(code)
 
 	if err != nil {
+		log.Println("Deu erro 1")
 		return "", err
 	}
 
@@ -59,6 +61,7 @@ func FindOriginalUrl(short_url string) (string, error) {
 	err = createSHortUrlCache.CreateShortUrlCache(code, shorturl.OriginalUrl)
 
 	if err != nil {
+		log.Println("Deu erro 2")
 		return "", err
 	}
 

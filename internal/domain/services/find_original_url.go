@@ -1,8 +1,8 @@
 package services
 
 import (
-	shorturl "github.com/CarlosEduardoAD/filler/internal/domain/models/shortUrl"
-	shortUrlRepository "github.com/CarlosEduardoAD/filler/internal/infrastructure/persistence/postgres"
+	shorturl "github.com/CarlosEduardoAD/shortie_cli/internal/domain/models/shortUrl"
+	shortUrlRepository "github.com/CarlosEduardoAD/shortie_cli/internal/infrastructure/persistence/postgres"
 )
 
 type FindOriginalUrl struct {

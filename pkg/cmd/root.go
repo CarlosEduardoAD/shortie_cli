@@ -7,9 +7,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "filler",
-	Short: "Filler is utility cli for converting files",
-	Long:  `A fast and pratical cli for converting files of any type in your system.`,
+	Use:   "shortie",
+	Short: "shortie_cli is utility cli shorting urls",
+	Long:  `A fast and pratical cli for shorting urls, you can acess them via cli or in your browser!.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		log.Println("Hello, World!")
 	},

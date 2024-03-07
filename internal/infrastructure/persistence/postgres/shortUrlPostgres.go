@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	shorturl "github.com/CarlosEduardoAD/filler/internal/domain/models/shortUrl"
+	shorturl "github.com/CarlosEduardoAD/shortie_cli/internal/domain/models/shortUrl"
 	"gorm.io/gorm"
 )
 

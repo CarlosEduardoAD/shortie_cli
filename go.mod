@@ -1,4 +1,4 @@
-module github.com/CarlosEduardoAD/filler
+module github.com/CarlosEduardoAD/shortie_cli
 
 go 1.21.6
 
